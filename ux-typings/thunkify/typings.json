@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/wxqqh/DataService/8642dca6abfcae3dd527e2368bbce87b0e889600/ux-typings/thunkify/thunkify.d.ts",
+    "raw": "github:wxqqh/DataService/ux-typings/thunkify/thunkify.d.ts#8642dca6abfcae3dd527e2368bbce87b0e889600",
+    "typings": "https://raw.githubusercontent.com/wxqqh/DataService/8642dca6abfcae3dd527e2368bbce87b0e889600/ux-typings/thunkify/thunkify.d.ts"
+  }
+}

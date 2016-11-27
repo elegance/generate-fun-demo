@@ -1,0 +1,9 @@
+node_modules/
+
+
+# 忽略掉所有文件名是*.js, *.js.map的文件.
+*.js
+*.js.map
+
+# 除了以下的
+!gulpfile.js

@@ -1,0 +1,25 @@
+{
+  "name": "generate-fun-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node-fetch": "^1.6.5",
+    "typescript": "^2.0.10"
+  },
+  "dependencies": {
+    "@types/fs-extra-promise": "^0.0.30",
+    "@types/node": "^6.0.51",
+    "@types/node-fetch": "^1.6.5",
+    "co": "^4.6.0",
+    "fs-extra-promise": "^0.4.1",
+    "fs-readfile-promise": "^3.0.0",
+    "node-fetch": "^1.6.3",
+    "thunkify": "^2.1.2"
+  }
+}
