@@ -48,7 +48,7 @@ g.next(2);  // 2
 ```
 
 关于错误处理机制的例子：
-```
+```javascript
 function* gen(x) {
     try{
         var y = yield x + 2;
@@ -65,7 +65,7 @@ g.throw('出错啦！');
 `g.throw`在函数体外，用指针对象的`throw`方法抛出错误，可以在函数体内`catch`捕获，出错的代码，与处理错误的代码实现了空间和时间上的分离，这对于一部编程很重要。
 
 ### 关于ts import node包的几种方式， 注意看几种的差别
-```
+```javascript
 // node：
 var fetch = require('node-fetch');   // 使用时：fetch(url).then();
 
@@ -84,7 +84,7 @@ import fetch from 'node-fetch'; // 使用时：fetch(url).then();
 2. Call by name
 
 理解例子：
-```
+```javascript
 function f(m) {
     return m * 2;
 }
@@ -93,13 +93,13 @@ var x = 2;
 f(x + 2); // 关键其实是理解这里：x + 2 这个表达式，代表作上面定义函数f的形参m，争论点在于：m 应该在这里求值，还是应该在函数定义的内部使用时再求值。
 ```
 上面的代码,在按`Call by value`策略时(C语言就采用了这种策略):
-```
+```javascript
 f(x + 2); 
 // 等同于
 f(3);   //这个求值是发生在 f函数外部
 ```
 如果是在`Call by name`策略时(Hashkell采用了这种策略)：
-```
+```javascript
 f(x + 2);
 // 等同于
 (x + 2) * 2;   //这个是发生在 函数f内部
@@ -114,7 +114,7 @@ f(x + 2);
 #### javascript语言的Thunk函数
 `javascript`语言的求值本事是采用的`Call by value`。在`javascript`语言中，`Thunk`函数替换的不是表达式，而是多参数函数，将其替换为单参数的版本，且只接收
 回调函数作为参数。
-```
+```javascript
 // 正常版本的readFile(多参数)
 fs.readFile(fileName, callback);
 
@@ -131,7 +131,7 @@ readXXFileThunk(callback);
 ```
 
 另外我的理解这个有点类似高阶到柯里化的例子：
-```
+```javascript
 var Thunk = function(power) {
     return function(num) {
         return Math.pow(num, power);
@@ -147,7 +147,7 @@ cube(2);    // ==> 8
 
 #### javascript多参数函数的Thunk转换(参数要有回调函数)
 // ES5:
-```
+```javascript
 var Thunk = function(fn) {
     return function() {
         var args = Array.prototype.slice.call(arguments);
@@ -175,7 +175,7 @@ var Thunk = function(fn) {
 ### async 函数
 `ES7`提供了`async`函数，使得异步操作变得更加方便。`async`函数其实就是`Generator`函数的语法糖。
 对比效果：
-```
+```javascript
 let gen = function* () {
    let f1 = yield readFile('/etc/fstab'); 
    let f2 = yield readFile('/etc/shells'); 
