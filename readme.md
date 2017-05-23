@@ -1,3 +1,7 @@
+参考自：
+* [Thunk 函数的含义和用法](http://www.ruanyifeng.com/blog/2015/05/thunk.html)
+* [async 函数](http://es6.ruanyifeng.com/#docs/async)
+
 ### `Generator` 函数是”协成“在`ES6`的实现，最大的特点就是可以交出函数的执行权（暂停执行）。
 
 #### 理解的三个特点：
